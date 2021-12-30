@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 class Ticket {
-    constructor() {
+    constructor(number, desktop) {
         this.number = number;
         this.desktop = desktop;
     }
@@ -51,7 +51,7 @@ class TicketControl {
         const ticket = new Ticket(this.last, null)
         this.tickets.push(this.last);
         this.saveDB();
-        return 'Ticket' + ticket.number;
+        return 'Ticket ' + ticket.number;
     }
 
     attendTicket(desktop) {
