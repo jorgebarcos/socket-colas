@@ -57,7 +57,7 @@ class TicketControl {
     attendTicket(desktop) {
         // no tenemos tickets
         if (this.tickets.length === 0) {
-            return 'No hay tickets';
+            return null;
         }
         const numberTicket = this.tickets[0];
         this.tickets.shift();

@@ -1,3 +1,12 @@
 
+const socket = io();
 
-console.log('Público HTML')
+
+
+socket.on('estado-actual', (payload) => {
+
+
+    console.log(payload)
+
+});
+
