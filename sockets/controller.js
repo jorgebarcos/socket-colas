@@ -32,7 +32,7 @@ const socketController = (socket) => {
 
         const ticket = ticketControl.attendTicket(escritorio);
 
-        socket.emit('estado-actual', ticketControl.last4);
+        socket.broadcast.emit('estado-actual', ticketControl.last4);
 
         if (!ticket) {
             return callback({
